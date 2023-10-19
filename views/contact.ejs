@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>welcome</title>
+        <style>
+                #sticky{
+                background-color: black;
+                padding: 5px;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                margin-bottom: 30px;
+            }
+            #login,#register{
+                background-color: black;
+                font-size: medium;
+                border: 1px solid black;
+                color: white;
+                cursor: pointer;
+                padding: 5px;
+                margin-left: 15px;
+            }
+            #login{
+                margin-left: 800px;
+
+            }
+            #regform{
+                margin: 50px;
+                margin-left: 100px;
+                margin-right: 100px;
+            }
+            label{
+                font-size: 25px;
+                color: rgb(31, 30, 30);
+            }
+            input{
+                padding:10px;
+                width: 1000px;
+                height: 35px;
+                background-color: rgb(236, 232, 232);
+                border: 2px solid rgb(236, 232, 232);
+                border-radius: 4px;
+                margin: 10px;
+                font-size: large;
+            }
+            .register{
+                background-color: black;
+                font-size: large;
+                border: 1px solid black;
+                color: white;
+                cursor: pointer;
+                padding: 5px;
+                margin-left: 10px;
+                border-radius: 3px;
+                padding: 10px;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+            .register-login{
+                background-color: white;
+                border: 1px solid white;
+                margin: 0%;
+                padding: 0%;
+                text-decoration: underline;
+                font-size: 18px;
+            }
+            #logout{
+                color: white;
+                background-color: red;
+                border: 1px solid red;
+                border-radius: 3px;
+                padding: 10px;
+                font-size: medium;
+                margin-left: 15px;
+                cursor: pointer;
+
+            }
+            #add{
+                background-color: rgb(8, 185, 209);
+                border: 2px solid rgb(8, 185, 209);
+                font-size: large;
+                margin-left: 10px;
+                padding: 10px;
+                border-radius: 3px;
+                cursor: pointer;
+            }
+            #reload{
+                color: white;
+                background-color: red;
+                border: 1px solid red;
+                border-radius: 3px;
+                padding: 10px;
+                font-size: medium;
+                padding-top: 15px;
+                padding-bottom: 15px;
+                margin-left: 15px;
+                cursor: pointer;
+                }
+            #show{
+                background-color: black;
+                font-size: 20px;
+                padding: 15px;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                color: white;
+            }
+            #showc{
+                font-size: 18px;
+                color: rgb(141, 137, 137);
+                margin: 0%;
+            }
+            #click{
+                background-color: white;
+                cursor: pointer;
+                border: 2px solid white ;
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+        </style>
+    </head>
+    <body style="margin: 0%;">
+        <diV id="sticky">
+            <form action="/form2" method="post">
+                <span style="color: white; font-size: 20px ; font-weight: 700;">CMS</span>
+                <button id="login" name="contact" value="showallcontact" >ALL CONTACTS</button>
+                <button id="register" name="create" value="createcontact">CREATE</button>
+                <button id="logout" name="logout" value="logout" >LOGOUT</button>
+            </form>
+            </form>
+
+
+        </diV>
+        <div style="margin-left: 125px; margin-right: 125px; ">
+            <form action="/reload" method="post">
+                <h1 style="margin: 0%;margin-left: 10px;">YOUR CONTACT</h1>
+                <button name="rcontact" id="reload" style="margin-top: 10px; margin-bottom: 10px;">RELOAD CONTACT</button>
+            </form>
+        <hr>
+        <span style="font-size: 20px;">Your Total Contacts: <span style="font-weight: 600;"><%= length   %></span></span>
+        <div class="contactshow">
+        <form action="/update" method="post">
+                <pre id="show">Name                ADDRESS                            EMAIL                 PHONE</pre>
+              <%  addlist.forEach(list =>{ %>
+                    <button id="click" name="click" value=<%= list._id %>><pre id="showc">  <span style="font-weight: 700; color: black;"><%= list.name %></span>             <%= list.Address %>                    <%= list.email %>       <%= list.number %></pre></button>
+             <%   }) %>     
+        </form>
+    </div>
+
+        </div>
+    </body>
+</html>

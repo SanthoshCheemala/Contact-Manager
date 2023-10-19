@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>register</title>
+
+        <style>
+            #sticky{
+                background-color: black;
+                padding: 5px;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                margin-bottom: 30px;
+            }
+            #login,#register{
+                background-color: black;
+                font-size: large;
+                border: 1px solid black;
+                color: white;
+                cursor: pointer;
+                padding: 5px;
+            }
+            #login{
+               margin-left: 1000px;
+            }
+            #regform{
+                margin: 50px;
+                margin-left: 100px;
+                margin-right: 100px;
+            }
+            label{
+                font-size: 25px;
+                color: rgb(31, 30, 30);
+            }
+            input{
+                padding: 5px;
+                width: 1000px;
+                height: 35px;
+                background-color: rgb(236, 232, 232);
+                border: 2px solid rgb(236, 232, 232);
+                border-radius: 4px;
+                margin: 10px;
+                font-size: large;
+            }
+            .register{
+                background-color: black;
+                font-size: large;
+                border: 1px solid black;
+                color: white;
+                cursor: pointer;
+                padding: 5px;
+                margin-left: 10px;
+                border-radius: 3px;
+                padding: 10px;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+            .register-login{
+                background-color: white;
+                border: 1px solid white;
+                margin: 0%;
+                padding: 0%;
+                text-decoration: underline;
+                font-size: 18px;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body style="margin: 0%;">
+        <diV id="sticky">
+                <form action="/form1" method="post">
+                    <span style="color: white; font-size: 20px ; font-weight: 700;">CMS</span>
+                    <button id="login" name="Login" value="login">LOGIN</button>
+                    <button id="register" name="register" value="register">REGISTER</button>
+                </form>
+        </diV>
+        <span style="margin-left: 100px; font-size: 30px; font-weight: bold;">CREATE YOUR ACCOUNT</span>
+        <form action="/register" method="post" id="regform">
+            
+            <label for="register-name">Name: </label><br>
+            <input type="text" name="name" class="register-name"><br>
+            <label for="email">Email Address:</label><br>
+            <input type="email" class="email" name="email"><br>
+            <label for="password">Password:</label><br>
+            <input type="password" class="register-password" name="password"><br>
+            <label for="confirm-password">Confirm Password:</label><br>
+            <input type="password" class="c-password" name="cpassword"><br>
+            <button class="register" name="register" value="register">Register</button>
+            <p style="font-size: larger;">Already have an account? <button class="register-login" name="registerlogin" value="registerlogin">Login</button></p>
+      
+        </form>
+    </body>
+</html>
